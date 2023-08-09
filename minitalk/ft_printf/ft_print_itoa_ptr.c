@@ -6,7 +6,7 @@
 /*   By: bstablo <bstablo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 01:34:11 by bstablo           #+#    #+#             */
-/*   Updated: 2023/06/05 19:01:01 by bstablo          ###   ########.fr       */
+/*   Updated: 2023/08/09 19:31:10 by bstablo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ char	*ft_itoa_base_ptr(unsigned long long nbr, char *base_to)
 	len = ft_charlen_ptr(nbr, blen);
 	str = malloc(sizeof(char) * len + 1);
 	str[len] = '\0';
-	if (nbr < 0)
-		nbr = -nbr;
 	while (nbr >= blen)
 	{
 		len--;

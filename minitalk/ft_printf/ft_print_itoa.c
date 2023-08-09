@@ -6,7 +6,7 @@
 /*   By: bstablo <bstablo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 22:52:16 by bstablo           #+#    #+#             */
-/*   Updated: 2023/06/05 19:00:33 by bstablo          ###   ########.fr       */
+/*   Updated: 2023/08/09 19:34:11 by bstablo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,6 @@ int	ft_ucharlen(unsigned int nbr, unsigned int blen)
 	unsigned int	len;
 
 	len = 0;
-	if (nbr < 0)
-	{
-		len = 1;
-		nbr = -nbr;
-	}
 	while (nbr >= blen)
 	{
 		len++;

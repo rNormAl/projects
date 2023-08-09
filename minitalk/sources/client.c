@@ -6,18 +6,11 @@
 /*   By: bstablo <bstablo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 19:02:35 by bstablo           #+#    #+#             */
-/*   Updated: 2023/08/04 17:49:13 by bstablo          ###   ########.fr       */
+/*   Updated: 2023/08/09 20:22:41 by bstablo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minitalk.h"
-
-int g_confirmation_received = 0;
-
-void ft_confirmation_sig(int sig)
-{
-    g_confirmation_received = 1;
-}
 
 int	ft_atoi(const char *str)
 {
@@ -48,7 +41,6 @@ int	ft_atoi(const char *str)
 		return (0);
 }
 
-
 void	ft_putchar_sig(int pid, char c)
 {
 	int	bit;
@@ -77,19 +69,14 @@ void	ft_putstr_sig(int pid, char *str)
 	}
 	ft_putchar_sig(pid, '\n');
 	ft_putchar_sig(pid, '\0');
-	signal(SIGUSR1, ft_confirmation_sig);
-    signal(SIGUSR2, ft_confirmation_sig);
-	while (!g_confirmation_received)
-    {
-        usleep(100);
-    }
-    ft_printf("Message sent successfully!\n");
+	usleep(100);
+	ft_printf("Message sent successfully!\n");
 }
 
 int	main(int argc, char **argv)
 {
 	int	pid;
-	
+
 	if (argc != 3)
 	{
 		ft_printf("Invalid number of arguments\n");
