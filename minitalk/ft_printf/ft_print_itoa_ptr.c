@@ -6,7 +6,7 @@
 /*   By: bstablo <bstablo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 01:34:11 by bstablo           #+#    #+#             */
-/*   Updated: 2023/08/09 19:31:10 by bstablo          ###   ########.fr       */
+/*   Updated: 2023/08/09 20:36:14 by bstablo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,6 @@ int	ft_charlen_ptr(unsigned long long nbr, unsigned long long blen)
 	unsigned long long	len;
 
 	len = 0;
-	if (nbr < 0)
-	{
-		len = 1;
-		nbr = -nbr;
-	}
 	while (nbr >= blen)
 	{
 		len++;
