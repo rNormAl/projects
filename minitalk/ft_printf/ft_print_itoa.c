@@ -6,7 +6,7 @@
 /*   By: bstablo <bstablo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 22:52:16 by bstablo           #+#    #+#             */
-/*   Updated: 2023/08/09 20:38:10 by bstablo          ###   ########.fr       */
+/*   Updated: 2023/08/09 20:39:57 by bstablo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,6 @@ char	*ft_itoa_base(int nbr, char *base_to)
 	len = ft_charlen(nbr, blen);
 	str = malloc(sizeof(char) * len + 1);
 	str[len] = '\0';
-	if (nbr < 0)
-		nbr = -nbr;
 	while (nbr >= blen)
 	{
 		len--;
